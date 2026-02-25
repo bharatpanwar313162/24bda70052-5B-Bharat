@@ -11,9 +11,7 @@ export const connectDB = async () => {
   }
 
   try {
-    await mongoose.connect(uri, {
-      dbName: "student_management_system",
-    });
+    await mongoose.connect(uri);
     console.log("✅ Connected to MongoDB");
   } catch (error) {
     console.error("❌ Failed to connect to MongoDB:", error.message);
